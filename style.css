@@ -238,6 +238,60 @@ a.contact-button-portfolio {
     display: none;
 }
 
+/* ANIMATION */
+.anim {
+    font-size: 14px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    position: relative;
+    width: 340px;
+  }
+  
+.anim::before,
+.anim::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  
+.anim::before {
+    background: white;
+    animation: typewriter 8s infinite
+      steps(24) 1s forwards;
+}
+  
+.anim::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter 8s infinite
+        steps(24) 1s forwards,
+      blink 750ms steps(24) infinite;
+}
+  
+@keyframes typewriter {
+    to {
+      left: 100%;
+    }
+}
+  
+@keyframes blink {
+    to {
+      background: transparent;
+    }
+}
+  
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
 /* RESPONSIVE DESIGN */
 
 @media only screen and (max-width: 767px) {
@@ -333,56 +387,3 @@ a.contact-button-portfolio {
 
 }
 
-/*p.intro {
-    font-size: 22px;
-    text-align: center;
-    position: relative;
-    position: relative;
-    width: max-content;
-    max-width: 450;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-  
-  p.intro::before,
-  p.intro::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  p.intro::before {
-    background: #f4f4f4;
-    animation: typewriter 6s
-      steps(24) 1s forwards;
-  }
-  
-  p.intro::after {
-    width: 0.125em;
-    background: black;
-    animation: typewriter 6s
-        steps(24) 1s forwards,
-      blink 750ms steps(24) infinite;
-  }
-  
-  @keyframes typewriter {
-    to {
-      left: 100%;
-    }
-  }
-  
-  @keyframes blink {
-    to {
-      background: transparent;
-    }
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }*/
