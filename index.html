@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- COUVERTURE -->
-    <div class="cover">
+   <!-- COUVERTURE -->
+    <script>
+        AOS.init();
+    </script>
+
+
+    <div class="cover" id="home">
         <img class="cover-profile" src="img/profile.png"/>
 
         <h1>Mathéo Snow</h1>
         <p>Développeur Freelance | Autodidacte</p>
         <div style="text-align: center;">
-            <a class="contact-button" href="mailto:ma***nov.prog@gmail.com?subject=Contact%20depuis%20Portfolio">ME CONTACTER</a>
+            <a class="contact-button" href="mailto:mathivanov.prog@gmail.com?subject=Contact%20depuis%20Portfolio">ME CONTACTER</a>
         </div>
 
         <div class="cover-contact">
-            <p><a href="mailto:mathivanov.prog@gmail.com?subject=Contact%20depuis%20Portfolio">ma***nov.prog@gmail.com</a></p>
-            <p><a href="tel:+33659892043">06 59 ** ** 43</a></p>
+            <p><a href="mailto:mathivanov.prog@gmail.com?subject=Contact%20depuis%20Portfolio">mathivanov.prog@gmail.com</a></p>
+            <p><a href="tel:+33659892043">06 59 89 20 43</a></p>
         </div>
     </div>
 
@@ -33,23 +40,50 @@
     <!-- SECTION BLANCHE-->
     <div class="section">
         <h2>En savoir plus</h2>
-        <img src="img/profile2.jpg" class="col-contenu">
+        <img src="img/profile2.jpg" class="col-contenu, img_section_grise" 
+        data-aos="zoom-in"
+        data-aos-delay="500"
+        data-aos-duration="1000"
+        data-aos-once="false">
         <div class="col-contenu float-right">
             <div class="txt_avc_lign_v">
                 <p>Salut, je m'appelle Mathéo et je suis passioné par la programmation, j'ai travaillé en autodidacte par l'intermédiaire de formation en ligne afin de développer mes propres projets.<br> 
                     <br>Je m'interesse désormais au développement <b>web</b> et au <b>pentesting</b> et je propose mes services personnalisés pour des missions freelance</p>
                 <a href="https://github.com/xSn0wx" target="_blank">En savoir plus sur mon profil</a>
             </div>
+
+            <div class="progressbar" data-aos="fade-right" data-aos-duration="2000">
+                <h3>Compétence en dévelopement</h3>
+                <div class="container">
+                <div class="skills html">HTML</div>
+                </div>
+
+                <p></p>
+                <div class="container">
+                <div class="skills css">CSS</div>
+                </div>
+
+                <p></p>
+                <div class="container">
+                <div class="skills python">Python</div>
+                </div>
+
+                <p></p>
+                <div class="container">
+                <div class="skills sql">SQL</div>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <!-- SECTION GRISE 2 -->
-    <div class="section section-grise2">
+    <div class="section section-grise2" data-aos="zoom-in-down" data-aos-duration="3000">
         <h2>Portfolio</h2>
             <table style="display: inline-block;" class="colportfolio">
                 <tr>
                     <td><div class="barre-verticale"></td>
-                    <td style="width: 100%;"><a href="portfolio_restaurant.html"><img style="width: 100%;" src="img/project1small.jpg"></a></td>
+                    <td style="width: 100%;"><a href="portfolio_restaurant.html"><img style="width: 100%;" src="img/project1small.jpg" class="img_section_grise"></a></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -59,35 +93,20 @@
             <table class="colportfolio float-right">
                 <tr>
                     <td><div class="barre-verticale"></td>
-                    <td style="width: 100%;"><a href="rootkit.html"><img style="width: 100%;" src="img/project2small.jpg"></a></td>
+                    <td style="width: 100%;"><a href="rootkit.html"><img style="width: 100%;" src="img/project2small.jpg" class="img_section_grise"></a></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td align="center"><a href="rootkit.html">Rootkit</a></td>
                 </tr>
             </table>
+        <a href="#" target="_blank" class="porfolio_plus">Plus de projet ici</a>
     </div>
 
     <!-- SECTION BLANCHE-->
-        <iframe src="contact-frame.html" scrolling="no"/>
+    <iframe src="contact-frame.html" scrolling="no"/>
+
     
-        
-    <!--
-    <div class="cursor"></div>
-    <script>const cursor = document.querySelector('.cursor');
-
-        document.addEventListener('mousemove', e => {
-            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-        })
-        
-        document.addEventListener('click', () => {
-            cursor.classList.add("expand");
-        
-            setTimeout(() => {
-                cursor.classList.remove("expand");
-            }, 500)
-        })</script>-->
-
 </body>
 
 </html>
